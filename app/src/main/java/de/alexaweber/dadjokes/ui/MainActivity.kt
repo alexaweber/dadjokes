@@ -1,7 +1,8 @@
-package de.alexaweber.dadjokes
+package de.alexaweber.dadjokes.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import de.alexaweber.dadjokes.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

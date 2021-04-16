@@ -14,5 +14,7 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
-      - name: build
-        run: ./gradlew build
+      - name: "debug build"
+        run: ./gradlew :app:assembleDebug
+      - name: "debug unit tests"
+        run: ./gradlew :app:testDebugUnitTest

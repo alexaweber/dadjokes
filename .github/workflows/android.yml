@@ -5,7 +5,6 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: checkout repo
         uses: actions/checkout@v2
@@ -16,5 +15,10 @@ jobs:
           distribution: 'adopt'
       - name: "debug build"
         run: ./gradlew :app:assembleDebug
+
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
       - name: "debug unit tests"
         run: ./gradlew :app:testDebugUnitTest
